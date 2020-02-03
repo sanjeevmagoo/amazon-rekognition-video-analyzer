@@ -1,6 +1,7 @@
-docker build .
 
-docker run -p 8080:8080 -ti <Image ID>
+docker build -t OpenHack-RedHat-AWS-2020
+
+docker run -p 8080:8080 -ti OpenHack-RedHat-AWS-2020
 
 aws configure
 
