@@ -10,7 +10,7 @@ RUN pip install pynt
 RUN apt-get install -y openssh-client vim
 RUN apt-get install -y libglib2.0-0 libsm6 libxrender1
 RUN apt-get install -y git
-RUN git clone https://github.com/sanjeevmagoo/amazon-rekognition-video-analyzer
+RUN git clone https://github.com/aws-samples/amazon-rekognition-video-analyzer
 RUN pip install pytz -t amazon-rekognition-video-analyzer/lambda/imageprocessor/
 RUN sed -i '141s/if "=" in part:/if "|" in part:/g' /usr/local/lib/python2.7/dist-packages/pynt/_pynt.py
 RUN echo $(cat /dev/urandom | tr -dc 'a-z0-9' | fold -w 32 | head -n 1) > /tmp/random
